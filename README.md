@@ -8,7 +8,7 @@ Please see [this blog article](http://www.devanpatel.me/writing-a-combinatorics-
 
 A rough roadmap for Combinatorics.js
 
-Permutation: a pi : {1...m} -> {1...m}
+Permutation: π : {1...m} -> {1...m}
 
 * Permutations
   * Behaviors
