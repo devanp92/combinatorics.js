@@ -1,0 +1,44 @@
+{
+  "name": "combinatoricsjs",
+  "version": "0.0.1",
+  "description": "Combinatorics.js is a standalone math library for Javascript and Node.js. It features a solution to work with Permutations, Posets, Trees, and other enumerative collections.",
+  "author": "Devan Patel <devanppatel92@@gmail.com> (https://github.com/devanp92)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devanp92/combinatoricsjs.git"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "math",
+    "mathematics",
+    "combinatorics",
+    "permutations",
+    "number",
+    "matrix"
+  ],
+  "devDependencies": {
+    "glob": "^5.0.5",
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
+    "istanbul": "^0.3.13",
+    "mkdirp": "^0.5.0",
+    "mocha": "^2.2.4",
+    "q": "^1.2.0",
+    "seed-random": "^2.2.0",
+    "tar": "^2.1.0",
+    "uglify-js": "^2.4.20",
+    "underscore": "^1.8.3",
+    "webpack": "^1.8.9"
+  },
+  "main": "./index",
+  "scripts": {
+    "build": "gulp",
+    "watch": "gulp watch",
+    "docs": "gulp docs",
+    "test": "mocha test --recursive",
+    "coverage": "istanbul cover _mocha -- test --recursive; echo \"\nCoverage report is available at ./coverage/lcov-report/index.html\""
+  },
+  "engines": {
+    "node": ">= 0.1"
+  }
+}
