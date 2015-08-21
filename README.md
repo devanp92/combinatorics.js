@@ -18,10 +18,12 @@ Permutation: π : {1...m} -> {1...m}
     * Complement
     * Inverse
     * Reverse
+    * Generate Random Permutation
   * States
     * Number of cycles
     * Parity (odd/even)
     * Number of fixed points (is it a Derangement?)
+    * Is Identity
   * Ancillary
     * Create/Return iterator
     * Print to cycle notation
