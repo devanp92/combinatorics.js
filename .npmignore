@@ -1,0 +1,11 @@
+coverage
+img
+misc
+node_modules
+tools
+component.json
+bower.json
+gulpfile.js
+.idea
+.npmignore
+.travis.yml
