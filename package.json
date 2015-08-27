@@ -17,26 +17,21 @@
     "matrix"
   ],
   "devDependencies": {
-    "glob": "^5.0.5",
-    "gulp": "^3.8.11",
-    "gulp-util": "^3.0.4",
-    "istanbul": "^0.3.13",
-    "mkdirp": "^0.5.0",
-    "mocha": "^2.2.4",
-    "q": "^1.2.0",
-    "seed-random": "^2.2.0",
-    "tar": "^2.1.0",
-    "uglify-js": "^2.4.20",
+    "eslint": "^1.2.1",
+    "gulp": "^3.6.0",
+    "gulp-eslint": "^0.15.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.9.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^0.4.5",
+    "gulp-plumber": "^1.0.0",
     "lodash": "^3.10.1",
-    "webpack": "^1.8.9"
+    "mocha": "^2.2.5",
+    "nodemon": "^1.4.1"
   },
-  "main": "./index",
   "scripts": {
-    "build": "gulp",
-    "watch": "gulp watch",
-    "docs": "gulp docs",
-    "test": "mocha test --recursive",
-    "coverage": "istanbul cover _mocha -- test --recursive; echo \"\nCoverage report is available at ./coverage/lcov-report/index.html\""
+    "prepublish": "gulp prepublish",
+    "test": "mocha test --recursive"
   },
   "engines": {
     "node": ">= 0.1"
