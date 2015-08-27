@@ -1,0 +1,28 @@
+{
+  "name": "components/combinatorics",
+  "description": "Combinatorics.js is a standalone math library for Javascript and Node.js. It features a solution to work with Permutations, Posets, Trees, and other enumerative collections.",
+  "type": "component",
+  "homepage": "https://github.com/devanp92",
+  "license": "Apache 2.0",
+  "support": {
+      "issues": "https://github.com/devanp92/combinatorics/issues",
+      "source": "https://github.com/devanp92/combinatorics/"
+  },
+  "authors": [
+      {
+          "name": "Devan Patel",
+          "email": "devanppatel92@gmail.com"
+      }
+  ],
+  "extra": {
+      "component": {
+          "scripts": [
+              "./dist/combinatorics.js"
+          ],
+          "files": [
+              "./dist/combinatorics.min.js",
+              "./dist/combinatorics.map"
+          ]
+      }
+  }
+}

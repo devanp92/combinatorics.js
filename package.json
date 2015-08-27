@@ -27,7 +27,7 @@
     "seed-random": "^2.2.0",
     "tar": "^2.1.0",
     "uglify-js": "^2.4.20",
-    "underscore": "^1.8.3",
+    "lodash": "^3.10.1",
     "webpack": "^1.8.9"
   },
   "main": "./index",

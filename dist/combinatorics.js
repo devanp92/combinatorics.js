@@ -5,7 +5,7 @@
  * Combinatorics.js is a standalone math library for Javascript and Node.js. It features a solution to work with Permutations, Posets, Trees, and other enumerative collections.
  *
  * @version 0.0.1
- * @date    2015-08-21
+ * @date    2015-08-23
  *
  * @license
  * Copyright (C) 2013-2015 Jos de Jong <wjosdejong@gmail.com>
@@ -89,7 +89,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  comb.create = create;
 
 	  // import data types, functions, constants, expression parser, etc.
-	  comb.import(__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./lib\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())));
+	  comb.import(__webpack_require__(6));
 
 	  return comb;
 	}
@@ -116,7 +116,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var configFactory = __webpack_require__(5);
 
 	/**
-	 * Math.js core. Creates a new, empty math.js instance
+	 * Combinatorics.js core. Creates a new, empty comb.js instance
 	 * @param {Object} [options] Available options:
 	 *                            {number} epsilon
 	 *                              Minimum relative difference between two
@@ -153,14 +153,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var instances = [];
 
 	  // create a namespace for the mathjs instance, and attach emitter functions
-	  var math = emitter.mixin({});
-	  math.type = {};
-	  math.expression = {
-	    transform: Object.create(math)
+	  var comb = emitter.mixin({});
+	  comb.type = {};
+	  comb.expression = {
+	    transform: Object.create(comb)
 	  };
 
 	  // create a new typed instance
-	  math.typed = typedFactory.create(math.type);
+	  comb.typed = typedFactory.create(comb.type);
 
 	  // create configuration options. These are private
 	  var _config = {
@@ -179,7 +179,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    // predictable output type of functions. When true, output type depends only
 	    // on the input types. When false (default), output type can vary depending
-	    // on input values. For example `math.sqrt(-2)` returns `NaN` when
+	    // on input values. For example `comb.sqrt(-2)` returns `NaN` when
 	    // predictable is false, and returns `complex('2i')` when true.
 	    predictable: false
 	  };
@@ -205,12 +205,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var instance;
 	    if (index === -1) {
 	      // doesn't yet exist
-	      if (factory.math === true) {
-	        // pass with math namespace
-	        instance = factory.factory(math.type, _config, load, math.typed, math);
+	      if (factory.comb === true) {
+	        // pass with comb namespace
+	        instance = factory.factory(comb.type, _config, load, comb.typed, comb);
 	      }
 	      else {
-	        instance = factory.factory(math.type, _config, load, math.typed);
+	        instance = factory.factory(comb.type, _config, load, comb.typed);
 	      }
 
 	      // append to the cache
@@ -226,10 +226,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  // load the import and config functions
-	  math['import'] = load(importFactory);
-	  math['config'] = load(configFactory);
+	  comb['import'] = load(importFactory);
+	  comb['config'] = load(configFactory);
 
-	  return math;
+	  return comb;
 	};
 
 
@@ -696,7 +696,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var curr = object.clone(config);
 
 	      // emit 'config' event
-	      math.emit('config', curr, prev);
+	      comb.emit('config', curr, prev);
 
 	      return curr;
 	    }
@@ -707,9 +707,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	exports.name = 'config';
-	exports.math = true; // request the math namespace as fifth argument
+	exports.comb = true; // request the comb namespace as fifth argument
 	exports.factory = factory;
 
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = [
+	  __webpack_require__(7)
+	];
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = [
+	  __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Permutation\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))
+	];
 
 /***/ }
 /******/ ])
