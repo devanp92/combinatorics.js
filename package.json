@@ -26,8 +26,7 @@
     "gulp-nsp": "^0.4.5",
     "gulp-plumber": "^1.0.0",
     "lodash": "^3.10.1",
-    "mocha": "^2.2.5",
-    "nodemon": "^1.4.1"
+    "mocha": "^2.2.5"
   },
   "scripts": {
     "prepublish": "gulp prepublish",
