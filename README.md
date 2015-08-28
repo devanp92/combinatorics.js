@@ -3,7 +3,7 @@
 # Table of Contents
 
 1. [Introduction](#introduction)
-2. [Build](#Build)
+2. [Install/Build](#installbuild)
 2. [Roadmap](#roadmap)
 3. [Contributing](#contributing)
 
@@ -15,7 +15,7 @@ Combinatorics.js is also a module to [math.js](https://github.com/josdejong/math
 
 Please see [this blog article](http://www.devanpatel.me/writing-a-combinatorics-module-for-math-js/) to get a general feel for this project.
 
-# Install + Build
+# Install/Build
 
 To build this project:
 ```
@@ -46,7 +46,7 @@ Permutation: π : {1...m} -> {1...m}:
   * <s>Multiply</s>
   * <s>Calculate number of cycles</s>
   * <s>Complement</s>
-  * Reverse
+  * <s>Reverse</s>
   * Generate Random Permutation
 * States
   * <s>Number of cycles</s>
