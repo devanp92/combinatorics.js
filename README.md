@@ -78,7 +78,8 @@ There are a few preferences regarding code contributions:
 
     Combinatorics.js follows the node.js code style
     Send pull requests to the develop branch, not the master branch.
-    If adding functionality, please include source (lib/), testing (test/) and documentation (docs/).
+    Pleae do not commit any files other than in lib/ and test/.
+    If adding functionality, please include source (lib/) and test (test/) files.
 
 
 
