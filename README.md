@@ -57,6 +57,20 @@ Permutation: π : {1...m} -> {1...m}:
   * Create/Return iterator
   * <s>Print to cycle notation</s>
 
+Util Functions
+
+* Combinations
+* Enumerative Methods
+    * Binomial Theorem
+      * Multinomial Theorem
+  * Bell Numbers
+  * Stirling numbers of the first kind
+  * Partitions
+    * (Weak) Compositions
+    * Set Partitions
+      * Stirling numbers of the second kind
+    * Integer Paritions
+
 # Contributing
 
 Feel free to contribute to combinatorics.js! You can contribute in different ways: spread the word, report bugs, come up with ideas and suggestions, and contribute to the code.
