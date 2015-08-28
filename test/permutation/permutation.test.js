@@ -7,6 +7,7 @@ var Permutation = require('../../lib/permutation/Permutation');
 describe('Permutation type', function () {
 
   describe('Constructor', function () {
+
     var permutation;
 
     it('should create a permutation correctly from the default constructor', function () {
@@ -117,4 +118,18 @@ describe('Permutation type', function () {
     });
 
   });
+
+  describe('complement', function () {
+
+    it('should correctly calculate the complement', function () {
+      assert.equal(_.isEqual(new Permutation([3, 1, 2]).complement()._values, [1, 3, 2]), true);
+      assert.equal(_.isEqual(new Permutation([3, 4, 1, 5, 2]).complement()._values, [3, 2, 5, 1, 4]), true);
+    });
+
+    it('should return empty complement when permutation values is empty', function () {
+      assert.equal(_.isEqual(new Permutation([]).complement()._values, []), true);
+    });
+
+  });
+
 });
