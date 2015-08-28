@@ -21,21 +21,20 @@ A rough roadmap for Combinatorics.js
 Permutation: π : {1...m} -> {1...m}:
   
 * Behaviors
-  * Inverse
-  * Multiply
-  * Calculate number of cycles
+  * <s>Inverse</s>
+  * <s>Multiply</s>
+  * <s>Calculate number of cycles</s>
   * Complement
-  * Inverse
   * Reverse
   * Generate Random Permutation
 * States
-  * Number of cycles
+  * <s>Number of cycles</s>
   * Parity (odd/even)
   * Number of fixed points (is it a Derangement?)
   * Is Identity
 * Ancillary
   * Create/Return iterator
-  * Print to cycle notation
+  * <s>Print to cycle notation</s>
 
 # Contributing
 
