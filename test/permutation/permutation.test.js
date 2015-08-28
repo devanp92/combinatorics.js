@@ -2,7 +2,7 @@
 
 var assert = require('assert');
 var _ = require('lodash');
-var Permutation = require('../../index');
+var Permutation = require('../../lib/permutation/Permutation');
 
 describe('Permutation type', function () {
 
@@ -62,7 +62,7 @@ describe('Permutation type', function () {
   });
 
   describe('get', function () {
-    
+
     it('should retrieve the element at a specific index', function () {
       var perm = new Permutation([1, 2, [3, 4]]);
       assert.equal(perm.get(0), 1);
