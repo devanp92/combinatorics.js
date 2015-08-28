@@ -132,4 +132,16 @@ describe('Permutation type', function () {
 
   });
 
+  describe('reverse', function () {
+
+      it('should calculate reverse of a permutation', function () {
+          var perm = new Permutation([1, 2, 3]);
+          assert.equal(_.isEqual(perm.reverse()._values, [3, 2, 1]), true);
+
+          perm = new Permutation([1, 2, 3, 4]);
+          assert.equal(_.isEqual(perm.reverse()._values, [4, 3, 2, 1]), true);
+      });
+
+  });
+
 });
