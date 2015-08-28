@@ -15,7 +15,7 @@ Combinatorics.js is also a module to [math.js](https://github.com/josdejong/math
 
 Please see [this blog article](http://www.devanpatel.me/writing-a-combinatorics-module-for-math-js/) to get a general feel for this project.
 
-# Build
+# Install + Build
 
 To build this project:
 ```
@@ -23,12 +23,17 @@ git clone git@github.com:devanp92/combinatorics.js.git
 npm install
 ```
 
-To test we use Gulp + Mocha:
+To test we use Mocha:
 
 ```
 npm test // mocha test --recursive
 ```
 
+To build we use Gulp:
+
+```
+gulp
+```
 
 # Roadmap
 
