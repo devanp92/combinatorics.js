@@ -62,8 +62,6 @@ Util Functions
 * <s>Is Integer</s>
 * <s>Combinations</s>
 * Enumerative Methods
-    * Binomial Theorem
-      * Multinomial Theorem
   * Bell Numbers
   * Stirling numbers of the first kind
   * Partitions
