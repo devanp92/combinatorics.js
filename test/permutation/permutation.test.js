@@ -61,6 +61,16 @@ describe('Permutation type', function () {
 
   });
 
+  describe('get', function () {
+    
+    it('should retrieve the element at a specific index', function () {
+      var perm = new Permutation([1, 2, [3, 4]]);
+      assert.equal(perm.get(0), 1);
+      assert.equal(_.isEqual(perm.get(2), 3), true);
+    });
+
+  });
+
   describe('disjointCycles', function (){
 
     it('should correctly return the permutation as disjoint cycles as a string', function (){
