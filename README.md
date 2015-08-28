@@ -40,7 +40,7 @@ gulp
 A rough roadmap for Combinatorics.js
 
 Permutation: π : {1...m} -> {1...m}:
-  
+
 * Behaviors
   * <s>Inverse</s>
   * <s>Multiply</s>
@@ -59,7 +59,8 @@ Permutation: π : {1...m} -> {1...m}:
 
 Util Functions
 
-* Combinations
+* <s>Is Integer</s>
+* <s>Combinations</s>
 * Enumerative Methods
     * Binomial Theorem
       * Multinomial Theorem
@@ -80,8 +81,8 @@ There are a few preferences regarding code contributions:
     Combinatorics.js follows the node.js code style
     Send pull requests to the develop branch, not the master branch.
     If adding functionality, please include source (lib/), testing (test/) and documentation (docs/).
-    
-    
+
+
 
 Thanks!
 
