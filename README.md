@@ -19,7 +19,7 @@ Please see [this blog article](http://www.devanpatel.me/writing-a-combinatorics-
 
 To build this project:
 ```
-git clone git@github.com:devanp92/combinatorics.js.git;
+git clone git@github.com:devanp92/combinatorics.js.git
 npm install
 ```
 
