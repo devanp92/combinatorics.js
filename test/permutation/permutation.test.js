@@ -144,4 +144,14 @@ describe('Permutation type', function () {
 
   });
 
+  describe('isIdentity', function () {
+    it('should determine if current permutation is identity', function () {
+      var perm = new Permutation([1, 2, 3, 4, 5]);
+      var perm2 = new Permutation([1, 2, 3, 4, 5]);
+      assert.equal(_.isEqual(perm._values, perm2._values), true);
+      perm2 = new Permutation([5, 4, 3, 2, 1]);
+      assert.equal(_.isEqual(perm._values, perm2._values), false);
+    });
+
+  });
 });
