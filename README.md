@@ -52,7 +52,7 @@ Permutation: π : {1...m} -> {1...m}:
   * <s>Number of cycles</s>
   * <s>Parity (odd/even)</s>
   * Number of fixed points (is it a Derangement?)
-  * Is Identity
+  * <s>Is Identity</s>
 * Ancillary
   * Create/Return iterator
   * <s>Print to cycle notation</s>
