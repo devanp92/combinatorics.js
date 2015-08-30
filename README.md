@@ -17,9 +17,14 @@ Please see [this blog article](http://www.devanpatel.me/writing-a-combinatorics-
 
 # Install/Build
 
-To build this project:
+To clone this project:
 ```
 git clone git@github.com:devanp92/combinatorics.js.git
+cd combinatorics.js
+```
+
+To install the necessary dependencies:
+```
 npm install
 ```
 
