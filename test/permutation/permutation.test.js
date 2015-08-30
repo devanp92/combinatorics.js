@@ -154,4 +154,16 @@ describe('Permutation type', function () {
     });
 
   });
+
+  describe('randomize', function () {
+    it('should shuffle the values', function () {
+      var perm = new Permutation([1, 2, 3, 4, 5]);
+      var perm2 = new Permutation([1, 2, 3, 4, 5]);
+      assert.equal(_.isEqual(perm.randomize()._values, perm2._values), false);
+      perm = new Permutation([5, 4, 3, 2, 1]);
+      assert.equal(_.isEqual(perm.randomize()._values, perm2._values), false);
+    });
+
+  });
+
 });
