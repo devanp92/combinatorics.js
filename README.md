@@ -93,7 +93,7 @@ Thanks!
 
 _Adapted from math.js_
 
-License
+# License
 
 Copyright (C) 2015 Devan Patel devanppatel92@gmail.com
 
