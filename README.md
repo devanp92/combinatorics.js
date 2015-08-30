@@ -47,7 +47,7 @@ Permutation: π : {1...m} -> {1...m}:
   * <s>Calculate number of cycles</s>
   * <s>Complement</s>
   * <s>Reverse</s>
-  * Generate Random Permutation
+  * <s>Randomize Permutation</s>
 * States
   * <s>Number of cycles</s>
   * <s>Parity (odd/even)</s>
