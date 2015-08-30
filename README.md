@@ -1,13 +1,5 @@
 # Combinatorics.js
 
-# Table of Contents
-
-1. [Introduction](#introduction)
-2. [Install/Build](#installbuild)
-2. [Roadmap](#roadmap)
-3. [Contributing](#contributing)
-4. [License] (#license)
-
 # Introduction
 
 Combinatorics.js is a standalone math library for Javascript and Node.js. It features a solution to work with Permutations, Posets, Trees, and other enumerative collections.
@@ -15,6 +7,13 @@ Combinatorics.js is a standalone math library for Javascript and Node.js. It fea
 Combinatorics.js is also a module to [math.js](https://github.com/josdejong/mathjs).
 
 Please see [this blog article](http://www.devanpatel.me/writing-a-combinatorics-module-for-math-js/) to get a general feel for this project.
+
+# Table of Contents
+
+1. [Install/Build](#installbuild)
+2. [Roadmap](#roadmap)
+3. [Contributing](#contributing)
+4. [License] (#license)
 
 # Install/Build
 
