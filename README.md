@@ -13,7 +13,7 @@ Please see [this blog article](http://www.devanpatel.me/writing-a-combinatorics-
 1. [Install/Build](#installbuild)
 2. [Roadmap](#roadmap)
 3. [Contributing](#contributing)
-4. [License] (#license)
+4. [License](#license)
 
 # Install/Build
 
