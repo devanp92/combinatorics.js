@@ -13,10 +13,10 @@ describe('Permutation type', function () {
     it('should create a permutation correctly from the default constructor', function () {
       permutation = new Permutation([]);
       assert.equal(permutation._numCycles, 0);
-      assert.equal(_.isArray(permutation._cycles), true);
-      assert.equal(_.size(permutation._cycles), 0);
-      assert.equal(_.isArray(permutation._values), true);
-      assert.equal(_.size(permutation._values), 0);
+      assert.equal(Array.isArray(permutation._cycles), true);
+      assert.equal(permutation._cycles.length, 0);
+      assert.equal(Array.isArray(permutation._values), true);
+      assert.equal(permutation._values.length, 0);
 
     });
 
@@ -45,9 +45,15 @@ describe('Permutation type', function () {
     });
 
     it('should accept an object with an array', function () {
-      assert.equal(_.isEqual(new Permutation([1, 2, 3, 4])._cycles, [[1], [2], [3], [4]]), true);
-      assert.equal(_.isEqual(new Permutation([1, 2, [3, 4], [5]])._numCycles, 4), true);
-      assert.equal(_.isEqual(new Permutation([1, 2, 3, 4])._values, [1, 2, 3, 4]), true);
+      assert.deepEqual(new Permutation([1, 2, 3, 4])._cycles, [[1], [2], [3], [4]]);
+      assert.equal(new Permutation([1, 2, [3, 4], [5]])._numCycles, 4);
+      assert.deepEqual(new Permutation([1, 2, 3, 4])._values, [1, 2, 3, 4]);
+    });
+
+    it.skip('should create the correct cycles when instantiated with array', function () {
+      var perm = new Permutation([2, 1, 5, 4, 3]);
+      console.log('perm._cycles', perm._cycles);
+      assert.equal(_.isEqual(new Permutation([2, 1, 5, 4, 3])._cycles, [ [1, 2], [3, 4, 5] ]), true);
     });
 
   });
@@ -67,7 +73,7 @@ describe('Permutation type', function () {
     it('should retrieve the element at a specific index', function () {
       var perm = new Permutation([1, 2, [3, 4]]);
       assert.equal(perm.get(0), 1);
-      assert.equal(_.isEqual(perm.get(2), 3), true);
+      assert.equal(perm.get(2), 3);
     });
 
   });
@@ -77,16 +83,16 @@ describe('Permutation type', function () {
     it('should correctly return the permutation as disjoint cycles as a string', function (){
       var perm = new Permutation([1, 2, [3, 4]]);
       assert.equal(_.isString(perm.disjointCycles()), true);
-      assert.equal(_.isEqual(perm.disjointCycles(), '[[1],[2],[3,4]]'), true);
+      assert.equal(perm.disjointCycles(), '[[1],[2],[3,4]]');
 
       perm = new Permutation([1, [2, 3, 4]]);
       assert.equal(_.isString(perm.disjointCycles()), true);
-      assert.equal(_.isEqual(perm.disjointCycles(), '[[1],[2,3,4]]'), true);
+      assert.equal(perm.disjointCycles(), '[[1],[2,3,4]]');
 
       perm = new Permutation([1, 2, 3, 4]);
       assert.equal(_.isString(perm.disjointCycles()), true);
-      assert.equal(_.isEqual(perm.disjointCycles(), '[[1],[2],[3],[4]]'), true);
-      assert.equal(_.isEqual(new Permutation([]).disjointCycles(), '[]'), true);
+      assert.equal(perm.disjointCycles(), '[[1],[2],[3],[4]]');
+      assert.equal(new Permutation([]).disjointCycles(), '[]');
     });
 
   });
@@ -95,12 +101,12 @@ describe('Permutation type', function () {
 
     it('should correctly calculate the inverse of a permutation', function (){
       var perm = new Permutation([2, 5, 4, 3, 1]);
-      assert.equal(_.isEmpty(perm.inverse()), false);
-      assert.equal(_.isEqual(perm.inverse()._cycles, [[5], [1], [4], [3], [2]]), true);
+      assert.equal(perm.inverse()._values.length, 5);
+      assert.deepEqual(perm.inverse()._cycles, [ [ 5 ], [ 1 ], [ 4 ], [ 3 ], [ 2 ] ]);
 
       perm = new Permutation([[2, 5, 4], [3, 1]]);
-      assert.equal(_.isEmpty(perm.inverse()._cycles), false);
-      assert.equal(_.isEqual(perm.inverse()._cycles, [[5], [1], [4], [3], [2]]), true);
+      assert.equal(perm.inverse()._cycles.length, 5);
+      assert.deepEqual(perm.inverse()._cycles, [[5], [1], [4], [3], [2]]);
     });
 
   });
@@ -109,12 +115,12 @@ describe('Permutation type', function () {
 
     it('should correctly calculate the product of 2 permutation', function (){
       var perm = new Permutation([5, 4, 3, 2, 1]);
-      assert.equal(_.isEmpty(perm.inverse()), false);
-      assert.equal(_.isEqual(perm.multiply([2, 4, 1, 3, 5])._cycles, [[5], [4], [3], [2], [1]]), true);
+      assert.equal(perm.inverse()._values.length, 5);
+      assert.deepEqual(perm.multiply([2, 4, 1, 3, 5])._cycles, [[5], [4], [3], [2], [1]]);
 
       perm = new Permutation([[2, 5, 4], [3, 1]]);
-      assert.equal(_.isEmpty(perm.inverse()), false);
-      assert.equal(_.isEqual(perm.multiply([2, 4, 1, 3, 5])._cycles, [[2], [5], [4], [3], [1]]), true);
+      assert.equal(perm.inverse()._values.length, 5);
+      assert.deepEqual(perm.multiply([2, 4, 1, 3, 5])._cycles, [[2], [5], [4], [3], [1]]);
     });
 
   });
@@ -122,12 +128,12 @@ describe('Permutation type', function () {
   describe('complement', function () {
 
     it('should correctly calculate the complement', function () {
-      assert.equal(_.isEqual(new Permutation([3, 1, 2]).complement()._values, [1, 3, 2]), true);
-      assert.equal(_.isEqual(new Permutation([3, 4, 1, 5, 2]).complement()._values, [3, 2, 5, 1, 4]), true);
+      assert.deepEqual(new Permutation([3, 1, 2]).complement()._values, [1, 3, 2]);
+      assert.deepEqual(new Permutation([3, 4, 1, 5, 2]).complement()._values, [3, 2, 5, 1, 4]);
     });
 
     it('should return empty complement when permutation values is empty', function () {
-      assert.equal(_.isEqual(new Permutation([]).complement()._values, []), true);
+      assert.deepEqual(new Permutation([]).complement()._values, []);
     });
 
   });
@@ -136,10 +142,10 @@ describe('Permutation type', function () {
 
       it('should calculate reverse of a permutation', function () {
           var perm = new Permutation([1, 2, 3]);
-          assert.equal(_.isEqual(perm.reverse()._values, [3, 2, 1]), true);
+          assert.deepEqual(perm.reverse()._values, [3, 2, 1]);
 
           perm = new Permutation([1, 2, 3, 4]);
-          assert.equal(_.isEqual(perm.reverse()._values, [4, 3, 2, 1]), true);
+          assert.deepEqual(perm.reverse()._values, [4, 3, 2, 1]);
       });
 
   });
@@ -148,9 +154,9 @@ describe('Permutation type', function () {
     it('should determine if current permutation is identity', function () {
       var perm = new Permutation([1, 2, 3, 4, 5]);
       var perm2 = new Permutation([1, 2, 3, 4, 5]);
-      assert.equal(_.isEqual(perm._values, perm2._values), true);
+      assert.deepEqual(perm._values, perm2._values);
       perm2 = new Permutation([5, 4, 3, 2, 1]);
-      assert.equal(_.isEqual(perm._values, perm2._values), false);
+      assert.notDeepEqual(perm._values, perm2._values);
     });
 
   });
@@ -159,9 +165,9 @@ describe('Permutation type', function () {
     it('should shuffle the values', function () {
       var perm = new Permutation([1, 2, 3, 4, 5]);
       var perm2 = new Permutation([1, 2, 3, 4, 5]);
-      assert.equal(_.isEqual(perm.randomize()._values, perm2._values), false);
+      assert.notDeepEqual(perm.randomize()._values, perm2._values);
       perm = new Permutation([5, 4, 3, 2, 1]);
-      assert.equal(_.isEqual(perm.randomize()._values, perm2._values), false);
+      assert.notDeepEqual(perm.randomize()._values, perm2._values);
     });
 
   });
