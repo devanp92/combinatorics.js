@@ -1,6 +1,6 @@
 {
   "name": "combinatoricsjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Combinatorics.js is a standalone math library for Javascript and Node.js. It features a solution to work with Permutations, Posets, Trees, and other enumerative collections.",
   "author": "Devan Patel <devanppatel92@@gmail.com> (https://github.com/devanp92)",
   "repository": {
