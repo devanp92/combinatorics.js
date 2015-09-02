@@ -50,6 +50,13 @@ describe('Permutation type', function () {
       assert.deepEqual(new Permutation([1, 2, 3, 4])._values, [1, 2, 3, 4]);
     });
 
+    it('should determine number of fixed points given array', function () {
+      assert.equal(new Permutation([1, 2, 3, 4])._numFixedPoints,4); 
+      assert.equal(new Permutation([1, 2, 5, 4, 3])._numFixedPoints, 3);
+      assert.equal(new Permutation([5, 4, 3, 2, 1])._numFixedPoints, 1);
+      assert.equal(new Permutation([1, [2, 3, 5], 4])._numFixedPoints, 3);
+    });
+
     it.skip('should create the correct cycles when instantiated with array', function () {
       var perm = new Permutation([2, 1, 5, 4, 3]);
       console.log('perm._cycles', perm._cycles);

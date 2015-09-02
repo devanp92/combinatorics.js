@@ -56,7 +56,7 @@ Permutation: π : {1...m} -> {1...m}:
 * States
   * <s>Number of cycles</s>
   * <s>Parity (odd/even)</s>
-  * Number of fixed points (is it a Derangement?)
+  * <s>Number of fixed points (is it a Derangement?)</s>
   * <s>Is Identity</s>
 * Ancillary
   * Create/Return iterator
