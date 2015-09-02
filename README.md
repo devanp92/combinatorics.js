@@ -46,48 +46,48 @@ A rough roadmap for Combinatorics.js
 
 1. Permutation: π : {1...n} -> {1...n}:
 
-* Behaviors
-  * <s>Inverse</s>
-  * <s>Multiply</s>
-  * <s>Calculate number of cycles</s>
-  * <s>Complement</s>
-  * <s>Reverse</s>
-  * <s>Randomize Permutation</s>
-* States
-  * <s>Number of cycles</s>
-  * <s>Parity (odd/even)</s>
-  * <s>Number of fixed points (is it a Derangement?)</s>
-  * <s>Is Identity</s>
-* Ancillary
-  * Create/Return iterator
-  * <s>Print to cycle notation</s>
+    * Behaviors
+      * <s>Inverse</s>
+      * <s>Multiply</s>
+      * <s>Calculate number of cycles</s>
+      * <s>Complement</s>
+      * <s>Reverse</s>
+      * <s>Randomize Permutation</s>
+    * States
+      * <s>Number of cycles</s>
+      * <s>Parity (odd/even)</s>
+      * <s>Number of fixed points (is it a Derangement?)</s>
+      * <s>Is Identity</s>
+    * Ancillary
+      * Create/Return iterator
+      * <s>Print to cycle notation</s>
 
 2. Permutation Patterns (subclass of Permutation)
 
-A permutation π is said to 'contain' a permutation σ (σ is a permuation {1..m}, such that m < n) if there exists a subsequence in π in the same relative order.
+    A permutation π is said to 'contain' a permutation σ (σ is a permuation {1..m}, such that m < n) if there exists a subsequence in π in the same relative order.
 
-Alternatively, a permutation avoids σ if there does not exist such a subsequence.
+    Alternatively, a permutation avoids σ if there does not exist such a subsequence.
 
-* Behaviors
-  * Contains
-  * Avoids
-  * Permutation avoiding pattern generator (all permutations π from [1..n] avoiding σ)
-* States
-  * List of permutations given containing or avoiding a pattern
-  * Cardinality
+    * Behaviors
+      * Contains
+      * Avoids
+      * Permutation avoiding pattern generator (all permutations π from [1..n] avoiding σ)
+    * States
+      * List of permutations given containing or avoiding a pattern
+      * Cardinality
 
 3. Util Functions
 
-* <s>Is Integer</s>
-* <s>Combinations</s>
-* Enumerative Methods
-  * Bell Numbers
-  * Stirling numbers of the first kind
-  * Partitions
-    * (Weak) Compositions
-    * Set Partitions
-      * Stirling numbers of the second kind
-    * Integer Paritions
+    * <s>Is Integer</s>
+    * <s>Combinations</s>
+    * Enumerative Methods
+      * Bell Numbers
+      * Stirling numbers of the first kind
+      * Partitions
+        * (Weak) Compositions
+        * Set Partitions
+          * Stirling numbers of the second kind
+        * Integer Paritions
 
 # Contributing
 
