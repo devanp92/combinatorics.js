@@ -44,7 +44,7 @@ gulp
 
 A rough roadmap for Combinatorics.js
 
-Permutation: π : {1...n} -> {1...n}:
+1. Permutation: π : {1...n} -> {1...n}:
 
 * Behaviors
   * <s>Inverse</s>
@@ -62,7 +62,7 @@ Permutation: π : {1...n} -> {1...n}:
   * Create/Return iterator
   * <s>Print to cycle notation</s>
 
-Permutation Patterns (subclass of Permutation)
+2. Permutation Patterns (subclass of Permutation)
 
 A permutation π is said to 'contain' a permutation σ (σ is a permuation {1..m}, such that m < n) if there exists a subsequence in π in the same relative order.
 
@@ -76,7 +76,7 @@ Alternatively, a permutation avoids σ if there does not exist such a subsequenc
   * List of permutations given containing or avoiding a pattern
   * Cardinality
 
-Util Functions
+3. Util Functions
 
 * <s>Is Integer</s>
 * <s>Combinations</s>
