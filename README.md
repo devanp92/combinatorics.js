@@ -95,16 +95,16 @@ Feel free to contribute to combinatorics.js! You can contribute in different way
 
 There are a few preferences regarding code contributions:
 
-    Combinatorics.js follows the node.js code style
-    Send pull requests to the develop branch, not the master branch.
-    Pleae do not commit any files other than in lib/ and test/.
-    If adding functionality, please include source (lib/) and test (test/) files.
+> Combinatorics.js follows the node.js code style
+> Send pull requests to the develop branch, not the master branch.
+> Pleae do not commit any files other than in lib/ and test/.
+> If adding functionality, please include source (lib/) and test (test/) files.
 
 
 
 Thanks!
 
-_Adapted from math.js_
+_Adapted from [math.js](http://mathjs.org/)_
 
 # License
 
