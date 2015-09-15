@@ -23,6 +23,11 @@ git clone git@github.com:devanp92/combinatorics.js.git
 cd combinatorics.js
 ```
 
+To install via npm:
+```
+npm install combinatoricsjs
+```
+
 To install the necessary dependencies:
 ```
 npm install
